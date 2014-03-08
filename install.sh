@@ -4,15 +4,26 @@
 	CONFIG_ARCHIVE_FILE='config.tgz'
 
 	INI_FILE='config.ini'
-	TMP_DIR=$(mktemp -d)
 
-	# download and extract files
-	wget -q -O "$TMP_DIR/$CONFIG_ARCHIVE_FILE" "$CONFIG_ARCHIVE_URL"
-	if [ $? -ne 0 ]; then
-		echo "ERROR! Can't download config files. Check URL in '$0' file." >&2
-		exit 1
+	if [ "$1" = '-l' ] || [ "$1" = '--local' ]; then
+		# installing from local directory
+		LOCAL_INSTALATION='yes'
+		TMP_DIR='.'
+		if [ ! -f "$INI_FILE" ]; then
+			echo "ERROR! Can't find '$INI_FILE' in current directory." >&2
+			exit 1
+		fi
+	else
+		# download and extract files
+		LOCAL_INSTALATION='no'
+		TMP_DIR=$(mktemp -d)
+		wget -q -O "$TMP_DIR/$CONFIG_ARCHIVE_FILE" "$CONFIG_ARCHIVE_URL"
+		if [ $? -ne 0 ]; then
+			echo "ERROR! Can't download config files. Check URL in '$0' file." >&2
+			exit 1
+		fi
+		tar xzf "$TMP_DIR/$CONFIG_ARCHIVE_FILE" -C "$TMP_DIR"
 	fi
-	tar xzf "$TMP_DIR/$CONFIG_ARCHIVE_FILE" -C "$TMP_DIR"
 
 	# parse ini file
 	# source: http://mark.aufflick.com/blog/2007/11/08/parsing-ini-files-with-sed
@@ -40,7 +51,9 @@
 	done
 
 	# cleanup
-	rm -rf "$TMP_DIR"
+	if [ "$LOCAL_INSTALATION" = 'no' ]; then
+		rm -rf "$TMP_DIR"
+	fi
 
 	echo "Done."
 }
