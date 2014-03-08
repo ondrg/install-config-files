@@ -1,0 +1,44 @@
+[user]
+;	name = 
+;	email = 
+[core]
+	editor = vim
+	autocrlf = input
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+[push]
+	default = simple
+[alias]
+	s = status
+	b = branch
+	bv = branch -vv
+	ba = branch -a
+	bav = branch -a -vv
+	co = checkout
+	cod = checkout -- *
+	clf = clean -f
+	a = add
+	ap = add -p
+	d = diff
+	da = diff HEAD
+	ds = diff --staged
+	c = commit
+	cv = commit -v
+	ca = commit --amend
+	l = log --graph --branches --remotes --tags --pretty='format:%C(yellow)%h %C(green)%ai %C(bold blue)%an %C(red)%d%C(reset) %s' -20
+	ll = log --graph --branches --remotes --tags --pretty='format:%C(yellow)%h %C(green)%ai %C(bold blue)%an %C(red)%d%C(reset) %s'
+	la = log --graph --branches --remotes --tags --pretty='format:%C(yellow)%h %C(green)%ai %C(bold blue)%an %C(red)%d%C(reset) %s' --all
+	lp = log --graph --branches --remotes --tags --pretty='format:%C(yellow)%h %C(green)%ai %C(bold blue)%an %C(red)%d%C(reset) %s' --patch
+	st = stash
+	stl = stash list
+	stp = stash pop
+	stc = stash clear
+	shs = stash show -p
+	up = pull --rebase
+	type = cat-file -t
+	dump = cat-file -p
+	ignored = ls-files --exclude-standard --ignored --others
+	authors = "!git log --pretty=format:%aN | sort | uniq -c | sort -rn"
