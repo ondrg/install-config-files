@@ -26,7 +26,12 @@ alias la='ls -AF'
 alias l='ls -CF'
 
 # other aliases
+alias apts='aptitude search'
+alias aptss='aptitude show'
 alias bc='bc -lq'
+alias iconvu='iconv -f cp1250 -t utf8'
+alias lsoff='lsof -bw -d cwd -a -c'
+alias psg='ps aux | grep -i'
 
 # easy extract
 extract () {
