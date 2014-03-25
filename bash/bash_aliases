@@ -8,7 +8,7 @@ PATH="/sbin:$PATH"
 # other variables
 EDITOR=vim
 PAGER=less
-LESS='-iMSx4 -FX'
+LESS='-iMSx4 -RSFX -e'
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
