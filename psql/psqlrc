@@ -52,7 +52,7 @@
 \echo 'Development queries:\n'
 
 \echo '\t:show_slow_queries\t-- show slow queries (requires pg_stat_statements)'
-\echo '\t:sp\t\t\t-- current Search Path'
+\echo '\t:sp\t\t\t-- current search path'
 \echo '\t:clear\t\t\t-- clear screen'
 \echo '\t:ll\t\t\t-- list\n'
 
