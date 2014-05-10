@@ -3,7 +3,6 @@
 \timing
 \encoding unicode
 
-\pset linestyle unicode
 \pset null '[NULL]'
 \pset border 2
 
