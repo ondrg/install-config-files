@@ -16,7 +16,8 @@
 \set PROMPT2 '%001%[%033[0;34m%]%002%/%001%[%033[0m%]%002%R%# '
 \set PROMPT3 '%001%[%033[0;34m%]%002>>%001%[%033[0m%]%002 '
 \set COMP_KEYWORD_CASE upper
-\set ON_ERROR_ROLLBACK on
+\set ON_ERROR_ROLLBACK off
+\set AUTOCOMMIT on
 
 \set QUIET OFF
 
