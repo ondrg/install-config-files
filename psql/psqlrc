@@ -23,7 +23,7 @@
 
 -- source: https://github.com/AF83/dotfiles/blob/master/.psqlrc
 
-\echo '\nAdministrative queries:\n'
+\echo 'Administrative queries:'
 
 \echo '\t:activity\t\t-- server activity'
 \echo '\t:bloat\t\t\t-- show table and index bloat in your database ordered by most wasteful'
@@ -40,29 +40,25 @@
 \echo '\t:settings\t\t-- server settings'
 \echo '\t:tablesize\t\t-- tables size'
 \echo '\t:total_index_size\t-- show the total size of the indexes in MB'
-\echo '\t:unused_indexes\t\t-- show unused and almost unused indexes, ordered by their size relative'
-\echo '\t\t\t\t   to the number of index scans. Exclude indexes of very small tables (< 5 pages),'
-\echo '\t\t\t\t   where the planner will almost invariably select a sequential scan, but may not'
-\echo '\t\t\t\t   in the future as the table grows.'
+\echo '\t:unused_indexes\t\t-- show unused and almost unused indexes, ordered by their size'
 \echo '\t:uptime\t\t\t-- server uptime'
 \echo '\t:uselesscol\t\t-- useless columns (must be run as superuser)'
 \echo '\t:waits\t\t\t-- waiting queries'
-\echo '\n'
 
-\echo 'Development queries:\n'
+\echo 'Development queries:'
 
 \echo '\t:show_slow_queries\t-- show slow queries (requires pg_stat_statements)'
 \echo '\t:sp\t\t\t-- current search path'
 \echo '\t:clear\t\t\t-- clear screen'
-\echo '\t:ll\t\t\t-- list\n'
+\echo '\t:ll\t\t\t-- list'
 
-\echo 'Help:\n'
+\echo 'Help:'
 
 \echo '\t:menu\t\t-- this help menu'
 \echo '\t\\h\t\t-- help with SQL commands'
 \echo '\t\\?\t\t-- help with psql commands\n'
 
-\echo '\nCurrent Host Server Date Time: '`date` '\n'
+\echo 'Current Host Server Date Time: '`date` '\n'
 
 -- Administration queries
 
