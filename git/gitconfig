@@ -25,16 +25,15 @@
 	d = diff
 	da = diff HEAD
 	ds = diff --staged
-	c = commit
-	cv = commit -v
-	ca = commit --amend
+	c = commit -v
+	ca = commit -v --amend
 	l = log --graph --branches --remotes --tags --pretty='format:%C(yellow)%h %C(green)%ai %C(bold blue)%an %C(red)%d%C(reset) %s' -20
 	ll = log --graph --branches --remotes --tags --pretty='format:%C(yellow)%h %C(green)%ai %C(bold blue)%an %C(red)%d%C(reset) %s'
 	la = log --graph --branches --remotes --tags --pretty='format:%C(yellow)%h %C(green)%ai %C(bold blue)%an %C(red)%d%C(reset) %s' --all
 	lp = log --graph --branches --remotes --tags --pretty='format:%C(yellow)%h %C(green)%ai %C(bold blue)%an %C(red)%d%C(reset) %s' --patch
 	st = stash
 	stl = stash list
-	stp = stash pop
+	stp = stash pop --index
 	stc = stash clear
 	shs = stash show -p
 	up = pull --rebase
