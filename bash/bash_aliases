@@ -1,6 +1,7 @@
 # sources:
 ## default debian .bashrc file
 ## https://gist.github.com/JakubTesarek/8840983
+## http://cs-blog.petrzemek.net/2015-05-24-jak-byt-produktivnejsi-efektivni-prace-s-pocitacem
 
 # add /sbin into PATH
 PATH="/sbin:$PATH"
@@ -20,10 +21,17 @@ if [ -x /usr/bin/dircolors ]; then
 	alias egrep='egrep --color=auto'
 fi
 
+# directory aliases
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ......='cd ../../../../..'
+
 # some more ls aliases
+alias l='ls -CF'
 alias ll='ls -lF'
 alias la='ls -AF'
-alias l='ls -CF'
 
 # other aliases
 alias apts='aptitude search'
