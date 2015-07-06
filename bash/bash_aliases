@@ -64,9 +64,9 @@ extract () {
 }
 
 # creates directory then moves into it
-function mkcdr {
-	mkdir -p -v $1
-	cd $1
+function mdc {
+	mkdir -p -v "$1"
+	cd "$1"
 }
 
 # creates an archive from given directory
