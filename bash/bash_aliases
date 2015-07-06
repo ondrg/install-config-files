@@ -28,6 +28,12 @@ alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
 
+
+# applications aliases
+alias g='git'
+alias m='make'
+alias v='vim'
+
 # some more ls aliases
 alias l='ls -CF'
 alias ll='ls -lF'
