@@ -35,8 +35,8 @@ alias m='make'
 alias v='vim'
 
 # some more ls aliases
-alias l='ls -CF'
-alias ll='ls -lF'
+alias l='ls -lF'
+alias ll='ls -CF'
 alias la='ls -AF'
 
 # other aliases
