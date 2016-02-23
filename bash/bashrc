@@ -59,6 +59,11 @@ if ! shopt -oq posix; then
 	fi
 fi
 
+# local settings
+if [ -f ~/.bashrc.local ]; then
+	. ~/.bashrc.local
+fi
+
 # alias definitions
 if [ -f ~/.bash_aliases ]; then
 	. ~/.bash_aliases
