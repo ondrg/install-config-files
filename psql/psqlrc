@@ -110,6 +110,8 @@
 
 \set sp 'SHOW search_path;'
 
+\set do 'DO LANGUAGE plpgsql $$\nDECLARE\nBEGIN\nEND;\n$$;'
+
 \set clear '\\! clear;'
 
 \set ll '\\! ls -lrt;'
