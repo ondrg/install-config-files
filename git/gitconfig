@@ -37,6 +37,7 @@
 	stc = stash clear
 	shs = stash show -p
 	up = pull --rebase
+	pb = push -u origin HEAD
 	type = cat-file -t
 	dump = cat-file -p
 	ignored = ls-files --exclude-standard --ignored --others
