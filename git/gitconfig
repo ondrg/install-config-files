@@ -18,6 +18,7 @@
 	ba = branch -a
 	bav = branch -a -vv
 	co = checkout
+	cb = checkout -b
 	cod = checkout -- *
 	clf = clean -f
 	a = add
