@@ -43,3 +43,5 @@
 	dump = cat-file -p
 	ignored = ls-files --exclude-standard --ignored --others
 	authors = "!git log --pretty=format:%aN | sort | uniq -c | sort -rn"
+[diff]
+        noprefix = true
